@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18F97E731BC13CDF006F982A /* GeneratePreviewForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F97E6F1BC13CDF006F982A /* GeneratePreviewForURL.m */; settings = {ASSET_TAGS = (); }; };
-		18F97E741BC13CDF006F982A /* GenerateThumbnailForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F97E701BC13CDF006F982A /* GenerateThumbnailForURL.m */; settings = {ASSET_TAGS = (); }; };
-		18F97E761BC13CDF006F982A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 18F97E721BC13CDF006F982A /* main.c */; settings = {ASSET_TAGS = (); }; };
-		18F97E781BC13EFF006F982A /* GenerateHTMLForJupyter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F97E771BC13EFF006F982A /* GenerateHTMLForJupyter.m */; settings = {ASSET_TAGS = (); }; };
+		18234F571C83195100E25599 /* MD5Hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 18234F561C83195100E25599 /* MD5Hash.h */; };
+		18234F591C83198E00E25599 /* MD5Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 18234F581C83198E00E25599 /* MD5Hash.m */; };
+		18F97E731BC13CDF006F982A /* GeneratePreviewForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F97E6F1BC13CDF006F982A /* GeneratePreviewForURL.m */; };
+		18F97E741BC13CDF006F982A /* GenerateThumbnailForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F97E701BC13CDF006F982A /* GenerateThumbnailForURL.m */; };
+		18F97E761BC13CDF006F982A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 18F97E721BC13CDF006F982A /* main.c */; };
+		18F97E781BC13EFF006F982A /* GenerateHTMLForJupyter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F97E771BC13EFF006F982A /* GenerateHTMLForJupyter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18234F561C83195100E25599 /* MD5Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5Hash.h; sourceTree = "<group>"; };
+		18234F581C83198E00E25599 /* MD5Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MD5Hash.m; sourceTree = "<group>"; };
 		18AF9F9D1B88D72B002E21BA /* jupyter-notebook-quick-look.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "jupyter-notebook-quick-look.qlgenerator"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F97E6F1BC13CDF006F982A /* GeneratePreviewForURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeneratePreviewForURL.m; path = "jupyter-notebook-quick-look/GeneratePreviewForURL.m"; sourceTree = SOURCE_ROOT; };
 		18F97E701BC13CDF006F982A /* GenerateThumbnailForURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenerateThumbnailForURL.m; path = "jupyter-notebook-quick-look/GenerateThumbnailForURL.m"; sourceTree = SOURCE_ROOT; };
@@ -57,6 +61,8 @@
 				18F97E701BC13CDF006F982A /* GenerateThumbnailForURL.m */,
 				18F97E771BC13EFF006F982A /* GenerateHTMLForJupyter.m */,
 				18F97E791BC13F8A006F982A /* GenerateHTMLForJupyter.h */,
+				18234F561C83195100E25599 /* MD5Hash.h */,
+				18234F581C83198E00E25599 /* MD5Hash.m */,
 				18F97E721BC13CDF006F982A /* main.c */,
 				18AF9FA01B88D72B002E21BA /* Supporting Files */,
 			);
@@ -78,6 +84,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18234F571C83195100E25599 /* MD5Hash.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +99,6 @@
 				18AF9F991B88D72B002E21BA /* Frameworks */,
 				18AF9F9A1B88D72B002E21BA /* Headers */,
 				18AF9F9B1B88D72B002E21BA /* Resources */,
-				18AF9FEC1B88F258002E21BA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -144,22 +150,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		18AF9FEC1B88F258002E21BA /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "PRODUCT=\"${PRODUCT_NAME}.qlgenerator\"\nQL_PATH=~/Library/QuickLook/\n\nrm -rf \"$QL_PATH/$PRODUCT\"\ntest -d \"$QL_PATH\" || mkdir -p \"$QL_PATH\" && cp -R \"$BUILT_PRODUCTS_DIR/$PRODUCT\" \"$QL_PATH\"\nqlmanage -r\n\necho \"$PRODUCT installed in $QL_PATH\"";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		18AF9F981B88D72B002E21BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -167,6 +157,7 @@
 			files = (
 				18F97E731BC13CDF006F982A /* GeneratePreviewForURL.m in Sources */,
 				18F97E781BC13EFF006F982A /* GenerateHTMLForJupyter.m in Sources */,
+				18234F591C83198E00E25599 /* MD5Hash.m in Sources */,
 				18F97E741BC13CDF006F982A /* GenerateThumbnailForURL.m in Sources */,
 				18F97E761BC13CDF006F982A /* main.c in Sources */,
 			);

@@ -10,5 +10,4 @@
 #define GenerateHTMLForJupyter_h
 #import <Foundation/Foundation.h>
 NSString * GenerateHTMLForJupyter(NSURL * notebook_url);
-
 #endif /* GenerateHTMLForJupyter_h */
