@@ -19,7 +19,7 @@ NSString * GenerateHTMLForJupyter(NSURL * notebook_url) {
     list.environment = [NSDictionary dictionaryWithObjectsAndKeys:@"en_US.UTF-8", @"LC_ALL", nil];
     list.currentDirectoryPath = @"/";
     NSString * out_path = [NSString stringWithFormat:@"/tmp/%@.html",digest];
-    list.arguments = @[@"python", @"-m", @"nbconvert", @"--to", @"html", notebook_path, @"--output", out_path];
+    list.arguments = @[@"jupyter", @"nbconvert", @"--to", @"html", notebook_path, @"--output", out_path];
     if (![[NSFileManager defaultManager] fileExistsAtPath:out_path]) {
         [list launch];
         [list waitUntilExit];
