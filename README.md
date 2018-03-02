@@ -10,4 +10,4 @@ Build qlgenerator using Xcode and then move jupter-notebook-quick-look.qlgenerat
 
 Python 3 with jupyter installed.
 
-Check out also [Jupyter App](www.github.com/jendas1/jupyter-notebook-quicklook-plugin) for opening jupyter notebooks right from Finder!
+Check out also the [Jupyter App](https://github.com/jendas1/JupyterApp) for opening jupyter notebooks right from the Finder!
