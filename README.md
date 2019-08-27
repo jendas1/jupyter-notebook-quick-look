@@ -4,7 +4,7 @@ Preview jupyter notebooks in quick look.
 
 ## Installation
 
-Build qlgenerator using Xcode and then move jupter-notebook-quick-look.qlgenerator to /Library/QuickLook __(Note: Make sure to move it to this system-wide folder NOT the user folder ~/Library/Quicklook ! )__.
+Build qlgenerator using Xcode and then move jupyter-notebook-quick-look.qlgenerator to /Library/QuickLook __(Note: Make sure to move it to this system-wide folder NOT the user folder ~/Library/Quicklook ! )__.
 
 ## Dependencies
 
